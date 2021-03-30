@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import Plant from './Plant'
+import Plant from './Plant';
 
 function App() {
   return (
-    <div className="App">
+    <div idName="App">
       <Plant />
     </div>
   );

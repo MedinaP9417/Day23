@@ -5,7 +5,7 @@ class SimpleForm extends React.Component {
        super(props);
        this.state = { name: 'Yoda'};
    }
-   onChangeHanler = (event) => {
+   onChangeHandler = (event) => {
        this.setState({name: event.target.value});
    }
    render() {
