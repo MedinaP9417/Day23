@@ -12,9 +12,9 @@ const TableHeader = () => {
                 <th>Last name</th>
             </tr>
         </thead>
-    )
+    );
 
-}
+};
 // src/Table.js
 const TableBody = (props) => {
     const rows = props.characterData.map((row, index) => {
@@ -23,6 +23,7 @@ const TableBody = (props) => {
                 <td>{row.firstName}</td>
                 <td>{row.lastName}</td>
                 <td>
+                    {" "}
                     <button onClick={() => props.removeCharacter(index)}>Delete</button>
                 </td>
             </tr>
@@ -30,7 +31,7 @@ const TableBody = (props) => {
     });
     return <tbody>{rows}</tbody>;
 
-}
+};
 // Add TableBody arrow function here
 
 const Table = (props) => {
@@ -40,10 +41,11 @@ const Table = (props) => {
         return (
             <table>
                 <TableHeader />
-                <TableBody characterData={characterData} removeCharacter={removeCharacter} /> 
+                <TableBody characterData={characterData} 
+                removeCharacter={removeCharacter} /> 
                 </table>
-        )
-    }
+        );
+    };
 
 
 export default Table;
