@@ -1,22 +1,24 @@
 // src/App.js
 import Raect, { Component } from 'react';
 import Form from './Form';
+import Table from './Table'
 
 
 class App extends Component {
     state = {
         characters: [], 
-    };
+    }
 }
 
 
+
 render() {
+
     handleSubmit = (character) => {
-        this.setState({ characters: [...this.state.characters, character] })
+        this.setState({ characters: [...this.state.characters, character]})
     }
     return (
         <div className="container">
-            <input type="button" value="Submit" onClick={this.submitForm} />
         <Form handleSubmit={this.handleSubmit} />
         </div>
     );
